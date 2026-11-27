@@ -1,6 +1,6 @@
-# Bruno CLI — Debian
+# TanyunAPI CLI — Debian
 
-Debian slim variant of the Bruno CLI Docker image.
+Debian slim variant of the TanyunAPI CLI Docker image.
 
 **Base image:** `node:24.22.3-slim`
 
@@ -9,7 +9,7 @@ Debian slim variant of the Bruno CLI Docker image.
 ```bash
 docker build -t usebruno/cli:debian ./images/debian
 
-# with specific Bruno CLI version
+# with specific TanyunAPI CLI version
 docker build \
   --build-arg BRUNO_VERSION=3.3.0 \
   -t usebruno/cli:3.3.0-debian \

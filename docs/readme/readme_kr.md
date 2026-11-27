@@ -1,7 +1,7 @@
 <br />
 <img src="../../assets/images/logo-transparent.png" width="80"/>
 
-### Bruno - API 탐색 및 테스트를 위한 오픈소스 IDE.
+### 探云 API (TanyunAPI) - API 탐색 및 테스트를 위한 오픈소스 IDE.
 
 [![GitHub version](https://badge.fury.io/gh/usebruno%2Fbruno.svg)](https://badge.fury.io/gh/usebruno%2Fbruno)
 [![CI](https://github.com/usebruno/bruno/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/usebruno/bruno/actions/workflows/tests.yml)

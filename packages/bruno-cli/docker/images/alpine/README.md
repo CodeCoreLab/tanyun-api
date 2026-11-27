@@ -1,6 +1,6 @@
-# Bruno CLI — Alpine
+# TanyunAPI CLI — Alpine
 
-Alpine Linux variant of the Bruno CLI Docker image.
+Alpine Linux variant of the TanyunAPI CLI Docker image.
 
 **Base image:** `node:24.22.3-alpine`
 
@@ -9,7 +9,7 @@ Alpine Linux variant of the Bruno CLI Docker image.
 ```bash
 docker build -t usebruno/cli:alpine ./images/alpine
 
-# with specific Bruno CLI version
+# with specific TanyunAPI CLI version
 docker build \
   --build-arg BRUNO_VERSION=3.3.0 \
   -t usebruno/cli:3.3.0-alpine \

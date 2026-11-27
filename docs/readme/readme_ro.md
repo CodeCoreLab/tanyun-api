@@ -1,7 +1,7 @@
 <br />
 <img src="../../assets/images/logo-transparent.png" width="80"/>
 
-### Bruno - Mediu integrat de dezvoltare cu sursă deschisă pentru explorarea și testarea API-urilor.
+### 探云 API (TanyunAPI) - Mediu integrat de dezvoltare cu sursă deschisă pentru explorarea și testarea API-urilor.
 
 [![GitHub version](https://badge.fury.io/gh/usebruno%2Fbruno.svg)](https://badge.fury.io/gh/usebruno%2Fbruno)
 [![CI](https://github.com/usebruno/bruno/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/usebruno/bruno/actions/workflows/tests.yml)

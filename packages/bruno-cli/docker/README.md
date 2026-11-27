@@ -1,6 +1,6 @@
-# Bruno CLI Docker Images
+# TanyunAPI CLI Docker Images
 
-Official Docker images for [Bruno CLI](https://www.usebruno.com), enabling container-native API collection runs in CI/CD pipelines and local environments without requiring Node.js or npm on the host. See the [Bruno CLI docs](https://docs.usebruno.com/bru-cli/overview) for CLI usage.
+Official Docker images for [TanyunAPI CLI](https://github.com/CodeCoreLab/tanyun-api), enabling container-native API collection runs in CI/CD pipelines and local environments without requiring Node.js or npm on the host. See the [TanyunAPI CLI docs](https://github.com/CodeCoreLab/tanyun-api#cli) for CLI usage.
 
 ## Registries
 
@@ -92,7 +92,7 @@ docker run --rm usebruno/cli --version
 
 > **Cross-platform note:** the examples below use `$(pwd)` which works in Bash / Zsh / Git Bash / WSL. On Windows native shells, substitute `$(pwd)` with `${PWD}` (PowerShell) or `%cd%` (CMD).
 
-> **Adding `bru` options:** The examples below show docker-specific flags. For all `bru run` options — recurse (`-r`), environments, variables, reporters, bail, and more — see the [Bruno CLI docs](https://docs.usebruno.com/bru-cli/overview).
+> **Adding `bru` options:** The examples below show docker-specific flags. For all `bru run` options — recurse (`-r`), environments, variables, reporters, bail, and more — see the [TanyunAPI CLI docs](https://github.com/CodeCoreLab/tanyun-api#cli).
 
 ```bash
 # run every request in the Bruno collection (current dir)

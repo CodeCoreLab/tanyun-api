@@ -1,14 +1,14 @@
-# Bruno CLI
+# TanyunAPI CLI
 
-With Bruno CLI, you can now run your API collections with ease using simple command line commands.
+With TanyunAPI CLI, you can now run your API collections with ease using simple command line commands.
 
 This makes it easier to test your APIs in different environments, automate your testing process, and integrate your API tests with your continuous integration and deployment workflows.
 
-For detailed documentation, visit [Bruno CLI Documentation](https://docs.usebruno.com/bru-cli/overview).
+For detailed documentation, visit [CLI documentation](https://github.com/CodeCoreLab/tanyun-api#cli).
 
 ## Installation
 
-To install the Bruno CLI, use the node package manager of your choice, such as NPM:
+To install the TanyunAPI CLI, use the node package manager of your choice, such as NPM:
 
 ```bash
 npm install -g @usebruno/cli
@@ -146,7 +146,7 @@ Bruno cli returns the following exit status codes:
 
 If you encounter any issues or have any feedback or suggestions, please raise them on our [GitHub repository](https://github.com/usebruno/bruno)
 
-Thank you for using Bruno CLI!
+Thank you for using TanyunAPI CLI!
 
 ## Changelog
 
