@@ -142,14 +142,14 @@ Please see [here](publishing.md) for more information.
 
 
 [Repository](https://github.com/CodeCoreLab/tanyun-api) <br />
-[Discord](https://discord.com/invite/KgcZUncpjq) <br />
-[Repository](https://github.com/CodeCoreLab/tanyun-api)
+[Repository](https://github.com/CodeCoreLab/tanyun-api) <br />
+[Issues](https://github.com/CodeCoreLab/tanyun-api/issues)
 
 ## Trademark
 
 **Name**
 
-`TanyunAPI` is a trademark held by [Anoop M D](https://www.helloanoop.com/)
+`TanyunAPI` is a project mark of [CodeCoreLab](https://github.com/CodeCoreLab/tanyun-api)
 
 **Logo**
 

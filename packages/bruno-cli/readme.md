@@ -11,7 +11,7 @@ For detailed documentation, visit [CLI documentation](https://github.com/CodeCor
 To install the TanyunAPI CLI, use the node package manager of your choice, such as NPM:
 
 ```bash
-npm install -g @usebruno/cli
+npm install -g @tanyun/cli
 ```
 
 ## Getting started
@@ -144,7 +144,7 @@ Bruno cli returns the following exit status codes:
 
 ## Support
 
-If you encounter any issues or have any feedback or suggestions, please raise them on our [GitHub repository](https://github.com/usebruno/bruno)
+If you encounter any issues or have any feedback or suggestions, please raise them on our [GitHub repository](https://github.com/CodeCoreLab/tanyun-api)
 
 Thank you for using TanyunAPI CLI!
 
@@ -152,7 +152,7 @@ Thank you for using TanyunAPI CLI!
 
 <!-- An absolute link is used here because npm treats links differently -->
 
-See [https://github.com/usebruno/bruno/releases](https://github.com/usebruno/bruno/releases)
+See [https://github.com/CodeCoreLab/tanyun-api/releases](https://github.com/CodeCoreLab/tanyun-api/releases)
 
 ## License
 

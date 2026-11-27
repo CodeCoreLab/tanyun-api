@@ -1,14 +1,12 @@
 <br />
 <img src="../../assets/images/logo-transparent.png" width="80"/>
 
-### 探云 API (TanyunAPI) - Mediu integrat de dezvoltare cu sursă deschisă pentru explorarea și testarea API-urilor.
+### TanyunAPI - IDE open source pentru explorarea și testarea API-urilor
 
-[![GitHub version](https://badge.fury.io/gh/usebruno%2Fbruno.svg)](https://badge.fury.io/gh/usebruno%2Fbruno)
-[![CI](https://github.com/usebruno/bruno/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/usebruno/bruno/actions/workflows/tests.yml)
-[![Commit Activity](https://img.shields.io/github/commit-activity/m/usebruno/bruno)](https://github.com/usebruno/bruno/pulse)
-[![X](https://img.shields.io/twitter/follow/use_bruno?style=social&logo=x)](https://twitter.com/use_bruno)
-[![Website](https://img.shields.io/badge/Website-Visit-blue)](https://www.usebruno.com)
-[![Download](https://img.shields.io/badge/Download-Latest-brightgreen)](https://www.usebruno.com/downloads)
+[![Website](https://img.shields.io/badge/Website-Visit-blue)](https://github.com/CodeCoreLab/tanyun-api#readme)
+[![Repo](https://img.shields.io/badge/Repository-GitHub-brightgreen)](https://github.com/CodeCoreLab/tanyun-api)
+
+> Client API desktop open source cu arhitectură proprie de dezvoltare.
 
 [English](../../readme.md)
 | [Українська](./readme_ua.md)
@@ -28,118 +26,149 @@
 | [العربية](./readme_ar.md)
 | [日本語](./readme_ja.md)
 | [ქართული](./readme_ka.md)
+| [Nederlands](./readme_nl.md)
+| [فارسی](./readme_fa.md)
 | [हिन्दी](./readme_hi.md)
 
-Bruno este un client API nou și inovativ, care vizează să revoluționeze status quo-ul reprezentat de Postman și alte instrumente similare.
+TanyunAPI este un client API desktop open source cu arhitectură proprie, pentru HTTP / gRPC / GraphQL / WebSocket și regresia colecțiilor.
 
-Bruno salvează colecțiile voastre direct într-o mapă din sistemul dvs. de fișiere. Folosim un limbaj de marcare cu text simplu, Bru, pentru a salva informații despre cererile API.
+TanyunAPI stochează colecțiile API direct pe sistemul de fișiere local, ca fișiere text simplu.
 
-Puteți folosi Git sau orice altă unealtă de control al versiunii la alegere pentru a colabora la colecțiile API voastre.
+Collaborate on collections with Git or any version control system.
 
-Bruno este numai offline. Nu va exista niciodată vreun plan pentru a adăuga sincronizarea cloud la Bruno. Noi valorăm confidențialitatea datelor voastre și credem că ar trebui să rămână pe dispozitivul vostru. Citiți viziunea noastră pe termen lung [aici](https://github.com/usebruno/bruno/discussions/269)
+TanyunAPI is offline-first and does not require cloud sync; data stays on your machine by default.
 
-📢 Priviți prezentarea noastră recentă de la India FOSS 3.0 Conference [aici](https://www.youtube.com/watch?v=7bSMFpbcPiY)
+Repository: [CodeCoreLab/tanyun-api](https://github.com/CodeCoreLab/tanyun-api)
 
-![bruno](/assets/images/landing-2.png) <br /><br />
+![tanyun](../../assets/images/landing-2-dark.png#gh-light-mode-only)
+![tanyun](../../assets/images/landing-2-light.png#gh-dark-mode-only) <br /><br />
 
-### Instalarea
+## Table of Contents
 
-Bruno este disponibil ca descărcare binară [pe website-ul nostru](https://www.usebruno.com/downloads) pentru Mac, Windows și Linux.
+- [Installation](#installation)
+- [CLI](#cli)
+- [Run with Docker](#run-with-docker)
+- [Features](#features)
+  - [Run across multiple platforms 🖥️](#run-across-multiple-platforms-%EF%B8%8F)
+  - [Collaborate via Git 👩‍💻🧑‍💻](#collaborate-via-git-%E2%80%8D%E2%80%8D)
+- [Important Links 📌](#important-links-)
+- [Showcase 🎥](#showcase-)
+- [Share Testimonials 📣](#share-testimonials-)
+- [Publishing to New Package Managers](#publishing-to-new-package-managers)
+- [Stay in touch 🌐](#stay-in-touch-)
+- [Trademark](#trademark)
+- [Contribute 👩‍💻🧑‍💻](#contribute-%E2%80%8D%E2%80%8D)
+- [Authors](#authors)
+- [License 📄](#license-)
 
-De asemenea, puteţi instala Bruno cu un gestionar de pachete precum Homebrew, Chocolatey, Snap şi Apt.
+## Installation
+
+探云 API 可通过本仓库 Releases 获取桌面端构建产物（Mac / Windows / Linux），具体安装步骤见发布说明。
 
 ```sh
-# Pe Mac cu Homebrew
-brew install bruno
-
-# Pe Windows cu Chocolatey
-choco install bruno
-
-# Pe Linux cu Snap
-snap install bruno
-
-# Pe Linux cu Apt
-sudo mkdir -p /etc/apt/keyrings
-sudo apt update && sudo apt install gpg curl
-curl -fsSL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x9FA6017ECABE0266" \
-  | gpg --dearmor \
-  | sudo tee /etc/apt/keyrings/bruno.gpg > /dev/null
-sudo chmod 644 /etc/apt/keyrings/bruno.gpg
-echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/bruno.gpg] http://debian.usebruno.com/ bruno stable" \
-  | sudo tee /etc/apt/sources.list.d/bruno.list
-sudo apt update && sudo apt install bruno
+# 克隆源码本地开发
+git clone https://github.com/CodeCoreLab/tanyun-api.git
+cd tanyun-api
+npm install
+npm run dev
 ```
 
-### Utilizați pe mai multe platforme 🖥️
+## CLI
 
-![bruno](/assets/images/run-anywhere.png) <br /><br />
+The **CLI** lets you run your API collections from the command line, which is ideal for automated testing and CI/CD pipelines. Install it from npm using the package manager of your choice:
 
-### Colaborați cu Git 👩‍💻🧑‍💻
+```sh
+npm install -g @tanyun/cli
+```
 
-Sau orice unealtă de control al versiunii la alegere
+Navigate to the directory containing your collection and run it:
 
-![bruno](/assets/images/version-control.png) <br /><br />
+```sh
+# Run every request in the collection
+bru run
 
-### Linkuri importante 📌
+# Run a single request
+bru run request.yml
 
-- [Viziunea noastră pe termen lung](https://github.com/usebruno/bruno/discussions/269)
-- [Roadmap](https://github.com/usebruno/bruno/discussions/384)
-- [Documentație](https://docs.usebruno.com)
-- [Stack Overflow](https://stackoverflow.com/questions/tagged/bruno)
-- [Website](https://www.usebruno.com)
-- [Prețuri](https://www.usebruno.com/pricing)
-- [Descărcări](https://www.usebruno.com/downloads)
-- [Sponsori GitHub](https://github.com/sponsors/helloanoop).
+# Run a folder against a specific environment
+bru run folder --env Local
+```
 
-### Vitrina 🎥
+For the full command reference, see the CLI help (`tanyun --help`) and repository docs.
 
-- [Recenzii](https://github.com/usebruno/bruno/discussions/343)
-- [Centrul de cunoștințe](https://github.com/usebruno/bruno/discussions/386)
-- [Scriptmania](https://github.com/usebruno/bruno/discussions/385)
+## Run with Docker
 
-### Sprijiniți ❤️
+Official Docker images for the **CLI** let you run API collections in CI/CD pipelines and locally without installing Node.js or npm on the host. Build from `Dockerfile` in this repository; `alpine` and `debian` variants support `linux/amd64` and `linux/arm64`.
 
-Dacă vă place Bruno și doriți să sprijiniți munca noastră de sursă deschisă, puteți considera să ne sponsorizați [pe GitHub](https://github.com/sponsors/helloanoop).
+```sh
+# 本地构建 CLI 镜像
+docker build -f packages/bruno-cli/docker/images/alpine/Dockerfile -t tanyun-cli .
 
-### Distribuiți recenziile 📣
+# 挂载当前目录运行集合
+docker run -v "$(pwd):/collections" tanyun-cli run collections/
+```
 
-Dacă Bruno va ajutat la locul de muncă și la echipele dvs., vă rugăm să nu uitați să distribuiți [recenziile în discuția noastră GitHub](https://github.com/usebruno/bruno/discussions/343)
+For Docker image build and CI examples, see `Dockerfile` and `.github/workflows` in this repository.
 
-### Publicarea la gestionari de pachete noi
+## Features
 
-Vă rugăm să citiţi [aici](../publishing/publishing_ro.md) pentru mai multă informaţie.
+### Run across multiple platforms 🖥️
 
-### Contribuiți 👩‍💻🧑‍💻
+![tanyun](../../assets/images/run-anywhere.png) <br /><br />
 
-Mă bucur că doriți să îmbunătățiți Bruno. Vă rugăm să consultați [ghidul pentru contribuire](../contributing/contributing_ro.md)
+### Collaborate via Git 👩‍💻🧑‍💻
 
-Chiar dacă nu puteți face contribuții prin cod, vă rugăm să nu ezitați să raportați erori și să solicitați funcții care trebuie implementate pentru a rezolva cazul dvs. de utilizare.
+Or any version control system of your choice
 
-### Autori
+![tanyun](../../assets/images/version-control.png) <br /><br />
 
-<div align="center">
-    <a href="https://github.com/usebruno/bruno/graphs/contributors">
-        <img src="https://contrib.rocks/image?repo=usebruno/bruno" />
-    </a>
-</div>
+## Important Links 📌
 
-### Păstrați legătura 🌐
+- [Repository](https://github.com/CodeCoreLab/tanyun-api)
+- [Releases](https://github.com/CodeCoreLab/tanyun-api/releases)
 
-[𝕏 (Twitter)](https://twitter.com/use_bruno) <br />
-[Website](https://www.usebruno.com) <br />
+## Showcase 🎥
+
+
+## Share Testimonials 📣
+
+If TanyunAPI has helped you at work and your teams, please share feedback via [GitHub Issues](https://github.com/CodeCoreLab/tanyun-api/issues).
+
+## Publishing to New Package Managers
+
+Please see [here](../../publishing.md) for more information.
+
+## Stay in touch 🌐
+
+
+[Repository](https://github.com/CodeCoreLab/tanyun-api) <br />
 [Discord](https://discord.com/invite/KgcZUncpjq) <br />
-[LinkedIn](https://www.linkedin.com/company/usebruno)
+[Repository](https://github.com/CodeCoreLab/tanyun-api)
 
-### Marcă comercială
+## Trademark
 
-**Nume**
+**Name**
 
-`Bruno` este o marcă deținută de [Anoop M D](https://www.helloanoop.com/)
+`TanyunAPI` is a trademark held by [Anoop M D](https://www.helloanoop.com/)
 
 **Logo**
 
-Logo-ul provine de la [OpenMoji](https://openmoji.org/library/emoji-1F436/). Licența: CC [BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+The logo is sourced from [OpenMoji](https://openmoji.org/library/emoji-1F436/). License: CC [BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 
-### Licența 📄
+## Contribute 👩‍💻🧑‍💻
+
+I am happy that you are looking to improve TanyunAPI. Please check out the [contributing guide](../../contributing.md)
+
+Even if you are not able to make contributions via code, please don't hesitate to file bugs and feature requests that needs to be implemented to solve your use case.
+
+## Authors
+
+<div align="center">
+    <a href="https://github.com/CodeCoreLab/tanyun-api/graphs/contributors">
+        <img src="https://contrib.rocks/image?repo=CodeCoreLab/tanyun-api" />
+    </a>
+</div>
+
+## License 📄
 
 [MIT](../../license.md)

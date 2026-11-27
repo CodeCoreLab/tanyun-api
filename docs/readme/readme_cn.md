@@ -3,12 +3,10 @@
 
 ### 探云 API (TanyunAPI) - 开源 IDE，用于探索和测试 API。
 
-[![GitHub version](https://badge.fury.io/gh/usebruno%2Fbruno.svg)](https://badge.fury.io/gh/usebruno%2Fbruno)
-[![CI](https://github.com/usebruno/bruno/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/usebruno/bruno/actions/workflows/tests.yml)
-[![Commit Activity](https://img.shields.io/github/commit-activity/m/usebruno/bruno)](https://github.com/usebruno/bruno/pulse)
-[![X](https://img.shields.io/twitter/follow/use_bruno?style=social&logo=x)](https://twitter.com/use_bruno)
-[![网站](https://img.shields.io/badge/Website-Visit-blue)](https://www.usebruno.com)
-[![下载](https://img.shields.io/badge/Download-Latest-brightgreen)](https://www.usebruno.com/downloads)
+[![Website](https://img.shields.io/badge/Website-Visit-blue)](https://github.com/CodeCoreLab/tanyun-api#readme)
+[![Repo](https://img.shields.io/badge/Repository-GitHub-brightgreen)](https://github.com/CodeCoreLab/tanyun-api)
+
+> 自研架构开发的开源桌面 API 客户端。
 
 [English](../../readme.md)
 | [Українська](./readme_ua.md)
@@ -28,149 +26,149 @@
 | [العربية](./readme_ar.md)
 | [日本語](./readme_ja.md)
 | [ქართული](./readme_ka.md)
+| [Nederlands](./readme_nl.md)
+| [فارسی](./readme_fa.md)
 | [हिन्दी](./readme_hi.md)
 
-Bruno 是一款全新且创新的 API 客户端，旨在颠覆 Postman 和其他类似工具。
+探云 API（TanyunAPI）是自研架构的开源桌面 API 客户端，面向 HTTP / gRPC / GraphQL / WebSocket 联调与集合回归。
 
-Bruno 直接在您的电脑文件夹中存储您的 API 信息。我们使用纯文本标记语言 Bru 来保存有关 API 的信息。
+探云 API 将接口集合直接保存在本地文件系统目录中，以普通文本文件描述 API 请求。
 
-您可以使用 Git 或您选择的任何版本控制系统来对您的 API 信息进行版本控制和协作。
+可用 Git 或任意版本控制协作管理接口集合。
 
-Bruno 仅限离线使用。我们计划永不向 Bruno 添加云同步功能。我们重视您的数据隐私，并认为它应该留在您的设备上。阅读我们的长期愿景 [点击查看](https://github.com/usebruno/bruno/discussions/269)
+探云 API 离线优先，不强制云同步；数据默认留在本机。
 
-[下载 Bruno](https://www.usebruno.com/downloads)
+仓库：[CodeCoreLab/tanyun-api](https://github.com/CodeCoreLab/tanyun-api)
 
-📢 观看我们在印度 FOSS 3.0 会议上的最新演讲 [点击查看](https://www.youtube.com/watch?v=7bSMFpbcPiY)
+![tanyun](../../assets/images/landing-2-dark.png#gh-light-mode-only)
+![tanyun](../../assets/images/landing-2-light.png#gh-dark-mode-only) <br /><br />
 
-![bruno](../../assets/images/landing-2.png) <br /><br />
+## Table of Contents
 
-## 商业版本 ✨
+- [Installation](#installation)
+- [CLI](#cli)
+- [Run with Docker](#run-with-docker)
+- [Features](#features)
+  - [Run across multiple platforms 🖥️](#run-across-multiple-platforms-%EF%B8%8F)
+  - [Collaborate via Git 👩‍💻🧑‍💻](#collaborate-via-git-%E2%80%8D%E2%80%8D)
+- [Important Links 📌](#important-links-)
+- [Showcase 🎥](#showcase-)
+- [Share Testimonials 📣](#share-testimonials-)
+- [Publishing to New Package Managers](#publishing-to-new-package-managers)
+- [Stay in touch 🌐](#stay-in-touch-)
+- [Trademark](#trademark)
+- [Contribute 👩‍💻🧑‍💻](#contribute-%E2%80%8D%E2%80%8D)
+- [Authors](#authors)
+- [License 📄](#license-)
 
-我们的大多数功能都是免费且开源的。
-我们致力于在 [开源与可持续性发展](https://github.com/usebruno/bruno/discussions/269) 之间取得和谐的平衡
+## Installation
 
-欢迎使用我们的 [付费版本](https://www.usebruno.com/pricing) ，看看附加的功能是否对您或团队有所帮助！ <br/>
-
-## 目录
-- [安装](#安装)
-- [特性](#特性)
-    - [跨平台使用 🖥️](#跨平台使用-)
-    - [通过Git协作 👩‍💻🧑‍💻](#通过git协作-)
-- [重要链接 📌](#重要链接-)
-- [展示 🎥](#展示-)
-- [分享评价 📣](#分享评价-)
-- [发布到新的包管理器](#发布到新的包管理器)
-- [联系方式 🌐](#联系方式-)
-- [商标](#商标)
-- [贡献 👩‍💻🧑‍💻](#贡献-)
-- [作者](#作者)
-- [许可证 📄](#许可证-)
-
-## 安装
-
-Bruno 可以在我们的 [网站上下载](https://www.usebruno.com/downloads) 适用于Mac、Windows 和 Linux 的可执行文件。
-
-您也可以通过包管理器如 Homebrew、Chocolatey、Scoop、Snap 和 Apt 安装 Bruno。
+探云 API 可通过本仓库 Releases 获取桌面端构建产物（Mac / Windows / Linux），具体安装步骤见发布说明。
 
 ```sh
-# 在 Mac 电脑上用 Homebrew 安装
-brew install bruno
-
-# 在 Windows 上用 Chocolatey 安装
-choco install bruno
-
-# 在 Windows 上用 Scoop 安装
-scoop bucket add extras
-scoop install bruno
-
-# 在 Windows 上用 winget 安装
-winget install Bruno.Bruno
-
-# 在 Linux 上用 Snap 安装
-snap install bruno
-
-# 在 Linux 上用 Flatpak 安装
-flatpak install com.usebruno.Bruno
-
-# 在 Linux 上用 Apt 安装
-sudo mkdir -p /etc/apt/keyrings
-sudo apt update && sudo apt install gpg curl
-curl -fsSL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x9FA6017ECABE0266" \
-  | gpg --dearmor \
-  | sudo tee /etc/apt/keyrings/bruno.gpg > /dev/null
-sudo chmod 644 /etc/apt/keyrings/bruno.gpg
-echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/bruno.gpg] http://debian.usebruno.com/ bruno stable" \
-  | sudo tee /etc/apt/sources.list.d/bruno.list
-sudo apt update && sudo apt install bruno
+# 克隆源码本地开发
+git clone https://github.com/CodeCoreLab/tanyun-api.git
+cd tanyun-api
+npm install
+npm run dev
 ```
 
-## 特性
+## CLI
 
-### 跨平台使用 🖥️
+The **CLI** lets you run your API collections from the command line, which is ideal for automated testing and CI/CD pipelines. Install it from npm using the package manager of your choice:
 
-![bruno](../../assets/images/run-anywhere.png) <br /><br />
+```sh
+npm install -g @tanyun/cli
+```
 
-### 通过Git协作 👩‍💻🧑‍💻
+Navigate to the directory containing your collection and run it:
 
-或者任何您选择的版本控制系统
+```sh
+# Run every request in the collection
+bru run
 
-![bruno](../../assets/images/version-control.png) <br /><br />
+# Run a single request
+bru run request.yml
 
-## 重要链接 📌
+# Run a folder against a specific environment
+bru run folder --env Local
+```
 
-- [我们的愿景](https://github.com/usebruno/bruno/discussions/269)
-- [路线图](https://www.usebruno.com/roadmap)
-- [文档](https://docs.usebruno.com)
-- [Stack Overflow](https://stackoverflow.com/questions/tagged/bruno)
-- [网站](https://www.usebruno.com)
-- [价格](https://www.usebruno.com/pricing)
-- [下载](https://www.usebruno.com/downloads)
+For the full command reference, see the CLI help (`tanyun --help`) and repository docs.
 
-## 展示 🎥
+## Run with Docker
 
-- [Testimonials](https://github.com/usebruno/bruno/discussions/343)
-- [Knowledge Hub](https://github.com/usebruno/bruno/discussions/386)
-- [Scriptmania](https://github.com/usebruno/bruno/discussions/385)
+Official Docker images for the **CLI** let you run API collections in CI/CD pipelines and locally without installing Node.js or npm on the host. Build from `Dockerfile` in this repository; `alpine` and `debian` variants support `linux/amd64` and `linux/arm64`.
 
-## 分享评价 📣
+```sh
+# 本地构建 CLI 镜像
+docker build -f packages/bruno-cli/docker/images/alpine/Dockerfile -t tanyun-cli .
 
-如果 Bruno 在您的工作和团队中帮助了您，请不要忘记在我们的 GitHub 讨论上分享您的 [评价](https://github.com/usebruno/bruno/discussions/343)
+# 挂载当前目录运行集合
+docker run -v "$(pwd):/collections" tanyun-cli run collections/
+```
 
-## 发布到新的包管理器
+For Docker image build and CI examples, see `Dockerfile` and `.github/workflows` in this repository.
 
-如需了解更多信息，请参见 [此处](../publishing/publishing_cn.md) 。
+## Features
 
-## 联系方式 🌐
+### Run across multiple platforms 🖥️
 
-[𝕏 (Twitter)](https://twitter.com/use_bruno) <br />
-[Website](https://www.usebruno.com) <br />
+![tanyun](../../assets/images/run-anywhere.png) <br /><br />
+
+### Collaborate via Git 👩‍💻🧑‍💻
+
+Or any version control system of your choice
+
+![tanyun](../../assets/images/version-control.png) <br /><br />
+
+## Important Links 📌
+
+- [Repository](https://github.com/CodeCoreLab/tanyun-api)
+- [Releases](https://github.com/CodeCoreLab/tanyun-api/releases)
+
+## Showcase 🎥
+
+
+## Share Testimonials 📣
+
+If TanyunAPI has helped you at work and your teams, please share feedback via [GitHub Issues](https://github.com/CodeCoreLab/tanyun-api/issues).
+
+## Publishing to New Package Managers
+
+Please see [here](../../publishing.md) for more information.
+
+## Stay in touch 🌐
+
+
+[Repository](https://github.com/CodeCoreLab/tanyun-api) <br />
 [Discord](https://discord.com/invite/KgcZUncpjq) <br />
-[LinkedIn](https://www.linkedin.com/company/usebruno)
+[Repository](https://github.com/CodeCoreLab/tanyun-api)
 
-## 商标
+## Trademark
 
-**名称**
+**Name**
 
-`Bruno` 是由 [Anoop M D](https://www.helloanoop.com/) 持有的商标。
+`TanyunAPI` is a trademark held by [Anoop M D](https://www.helloanoop.com/)
 
 **Logo**
 
-Logo 源自 [OpenMoji](https://openmoji.org/library/emoji-1F436/). License: CC [BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+The logo is sourced from [OpenMoji](https://openmoji.org/library/emoji-1F436/). License: CC [BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 
-## 贡献 👩‍💻🧑‍💻
+## Contribute 👩‍💻🧑‍💻
 
-很高兴您希望改进 bruno。请查看 [贡献指南](../contributing/contributing_cn.md)。
+I am happy that you are looking to improve TanyunAPI. Please check out the [contributing guide](../../contributing.md)
 
-即使您无法通过代码做出贡献，我们仍然欢迎您提出 BUG 和新的功能需求。
+Even if you are not able to make contributions via code, please don't hesitate to file bugs and feature requests that needs to be implemented to solve your use case.
 
-## 作者
+## Authors
 
 <div align="center">
-    <a href="https://github.com/usebruno/bruno/graphs/contributors">
-        <img src="https://contrib.rocks/image?repo=usebruno/bruno" />
+    <a href="https://github.com/CodeCoreLab/tanyun-api/graphs/contributors">
+        <img src="https://contrib.rocks/image?repo=CodeCoreLab/tanyun-api" />
     </a>
 </div>
 
-## 许可证 📄
+## License 📄
 
 [MIT](../../license.md)

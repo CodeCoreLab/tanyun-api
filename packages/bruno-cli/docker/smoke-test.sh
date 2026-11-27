@@ -1,9 +1,9 @@
 #!/bin/sh
-# Smoke tests for Bruno CLI Docker image
+# Smoke tests for TanyunAPI CLI Docker image
 # Usage: ./smoke-test.sh <image> [collection-abs-path] [run-target] [env-name]
 # Examples:
-#   ./smoke-test.sh usebruno/cli:alpine
-#   ./smoke-test.sh usebruno/cli:alpine /abs/path/to/collection echo Prod
+#   ./smoke-test.sh tanyun/cli:alpine
+#   ./smoke-test.sh tanyun/cli:alpine /abs/path/to/collection echo Prod
 
 set -e
 

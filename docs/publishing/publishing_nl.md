@@ -1,7 +1,22 @@
 [English](../../publishing.md)
 
-### Bruno publiceren naar een nieuwe pakketbeheerder
+[English](../../publishing.md)
+| [Türkçe](./publishing_tr.md)
+| [Deutsch](./publishing_de.md)
+| [Français](./publishing_fr.md)
+| [Português (BR)](./publishing_pt_br.md)
+| [বাংলা](./publishing_bn.md)
+| [Română](./publishing_ro.md)
+| [Polski](./publishing_pl.md)
+| [简体中文](./publishing_cn.md)
+| [正體中文](./publishing_zhtw.md)
+| [日本語](./publishing_ja.md)
+| **Nederlands**
+| [فارسی](./publishing_fa.md)
 
-Hoewel onze code open source is en beschikbaar voor iedereen, verzoeken we je vriendelijk om contact met ons op te nemen voordat je publicatie overweegt op nieuwe pakketbeheerders. Als de maker van Bruno houd ik het handelsmerk `Bruno` voor dit project en wil ik het distributieproces beheren. Als je Bruno op een nieuwe pakketbeheerder wilt zien, dien dan een GitHub-issue in.
+### TanyunAPI publiceren in een nieuwe pakketbeheerder
 
-Hoewel de meerderheid van onze functies gratis en open source zijn (die REST en GraphQL API's dekken), streven we ernaar een harmonieuze balans te vinden tussen open-source principes en duurzaamheid - https://github.com/usebruno/bruno/discussions/269
+While our code is open source and available for everyone to use, we kindly request that you reach out to us before considering publication on new package managers. As the creator of TanyunAPI, I hold the trademark `TanyunAPI` for this project and would like to manage its distribution. If you'd like to see TanyunAPI on a new package manager, please raise a GitHub issue.
+
+While the majority of our features are free and open source (which covers REST and GraphQL Apis),
+we strive to strike a harmonious balance between open-source principles and sustainability - https://github.com/CodeCoreLab/tanyun-api/issues

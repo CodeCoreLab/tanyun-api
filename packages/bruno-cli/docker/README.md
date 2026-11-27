@@ -5,8 +5,8 @@ Official Docker images for [TanyunAPI CLI](https://github.com/CodeCoreLab/tanyun
 ## Registries
 
 ```bash
-docker pull usebruno/cli:latest
-docker pull ghcr.io/usebruno/cli:latest
+docker pull tanyun/cli:latest
+docker pull ghcr.io/tanyun/cli:latest
 ```
 
 ---
@@ -15,8 +15,8 @@ docker pull ghcr.io/usebruno/cli:latest
 
 | Variant | Base image | Details |
 |---------|-----------|---------|
-| **Alpine** (default) | `node:24.22.3-alpine` | [→ Alpine README](https://github.com/usebruno/bruno/blob/main/packages/bruno-cli/docker/images/alpine/README.md) |
-| **Debian** | `node:24.22.3-slim` | [→ Debian README](https://github.com/usebruno/bruno/blob/main/packages/bruno-cli/docker/images/debian/README.md) |
+| **Alpine** (default) | `node:24.22.3-alpine` | [→ Alpine README](https://github.com/CodeCoreLab/tanyun-api/blob/main/packages/bruno-cli/docker/images/alpine/README.md) |
+| **Debian** | `node:24.22.3-slim` | [→ Debian README](https://github.com/CodeCoreLab/tanyun-api/blob/main/packages/bruno-cli/docker/images/debian/README.md) |
 
 ### Quick choice
 
@@ -27,31 +27,31 @@ docker pull ghcr.io/usebruno/cli:latest
 
 ## Tags
 
-Every release publishes the following tags to **both** Docker Hub (`usebruno/cli`) and GHCR (`ghcr.io/usebruno/cli`).
+Every release publishes the following tags to **both** Docker Hub (`tanyun/cli`) and GHCR (`ghcr.io/tanyun/cli`).
 
 ### Alpine variant (default)
 
 | Tag pattern | Example | Notes |
 |-------------|---------|-------|
-| `latest` | `usebruno/cli:latest` | Newest release marked as latest. Only moves when the publish workflow is run with "Tag this version as latest" checked. |
-| `latest-alpine` | `usebruno/cli:latest-alpine` | Alias of `latest` — also alpine. |
-| `alpine` | `usebruno/cli:alpine` | Newest alpine, moves on every alpine publish. |
-| `<version>` | `usebruno/cli:3.3.0` | Exact version, immutable. |
-| `<version>-alpine` | `usebruno/cli:3.3.0-alpine` | Exact version, explicitly alpine. |
-| `<major.minor>` | `usebruno/cli:3.3` | Floats with patch releases (3.3.x). |
-| `<major.minor>-alpine` | `usebruno/cli:3.3-alpine` | Same, explicitly alpine. |
-| `<major>` | `usebruno/cli:3` | Floats with any 3.x.x release. |
-| `<major>-alpine` | `usebruno/cli:3-alpine` | Same, explicitly alpine. |
+| `latest` | `tanyun/cli:latest` | Newest release marked as latest. Only moves when the publish workflow is run with "Tag this version as latest" checked. |
+| `latest-alpine` | `tanyun/cli:latest-alpine` | Alias of `latest` — also alpine. |
+| `alpine` | `tanyun/cli:alpine` | Newest alpine, moves on every alpine publish. |
+| `<version>` | `tanyun/cli:3.3.0` | Exact version, immutable. |
+| `<version>-alpine` | `tanyun/cli:3.3.0-alpine` | Exact version, explicitly alpine. |
+| `<major.minor>` | `tanyun/cli:3.3` | Floats with patch releases (3.3.x). |
+| `<major.minor>-alpine` | `tanyun/cli:3.3-alpine` | Same, explicitly alpine. |
+| `<major>` | `tanyun/cli:3` | Floats with any 3.x.x release. |
+| `<major>-alpine` | `tanyun/cli:3-alpine` | Same, explicitly alpine. |
 
 ### Debian variant
 
 | Tag pattern | Example | Notes |
 |-------------|---------|-------|
-| `latest-debian` | `usebruno/cli:latest-debian` | Newest debian release marked as latest (gated by the same checkbox). |
-| `debian` | `usebruno/cli:debian` | Newest debian, moves on every debian publish. |
-| `<version>-debian` | `usebruno/cli:3.3.0-debian` | Exact version, debian. |
-| `<major.minor>-debian` | `usebruno/cli:3.3-debian` | Floats with debian patch releases. |
-| `<major>-debian` | `usebruno/cli:3-debian` | Floats with any 3.x.x debian release. |
+| `latest-debian` | `tanyun/cli:latest-debian` | Newest debian release marked as latest (gated by the same checkbox). |
+| `debian` | `tanyun/cli:debian` | Newest debian, moves on every debian publish. |
+| `<version>-debian` | `tanyun/cli:3.3.0-debian` | Exact version, debian. |
+| `<major.minor>-debian` | `tanyun/cli:3.3-debian` | Floats with debian patch releases. |
+| `<major>-debian` | `tanyun/cli:3-debian` | Floats with any 3.x.x debian release. |
 
 The unsuffixed tags (`:latest`, `:3.3.0`, `:3.3`, `:3`, `:alpine`) always resolve to the alpine variant by convention.
 
@@ -63,17 +63,17 @@ The unsuffixed tags (`:latest`, `:3.3.0`, `:3.3`, `:3`, `:alpine`) always resolv
 
 ```bash
 # latest (alpine by default — smallest, fastest to pull)
-docker pull usebruno/cli:latest
+docker pull tanyun/cli:latest
 
 # specific version (recommended for production CI)
-docker pull usebruno/cli:3.3.0
+docker pull tanyun/cli:3.3.0
 
 # major.minor — gets patch updates automatically
-docker pull usebruno/cli:3.3
+docker pull tanyun/cli:3.3
 
 # debian variant
-docker pull usebruno/cli:debian
-docker pull usebruno/cli:3.3.0-debian
+docker pull tanyun/cli:debian
+docker pull tanyun/cli:3.3.0-debian
 ```
 
 ---
@@ -81,7 +81,7 @@ docker pull usebruno/cli:3.3.0-debian
 #### Check it works
 
 ```bash
-docker run --rm usebruno/cli --version
+docker run --rm tanyun/cli --version
 ```
 
 ---
@@ -96,22 +96,22 @@ docker run --rm usebruno/cli --version
 
 ```bash
 # run every request in the Bruno collection (current dir)
-docker run -v $(pwd):/bruno usebruno/cli run 
+docker run -v $(pwd):/bruno tanyun/cli run 
 
 # run a specific subfolder (group of requests) within that collection
-docker run -v $(pwd):/bruno usebruno/cli run ./api-tests
+docker run -v $(pwd):/bruno tanyun/cli run ./api-tests
 
 # run a single .bru request file from that collection
-docker run -v $(pwd):/bruno usebruno/cli run ./api-tests/login.bru
+docker run -v $(pwd):/bruno tanyun/cli run ./api-tests/login.bru
 
 # write a JUnit XML report (lands in the current directory because of the bind mount)
-docker run -v $(pwd):/bruno usebruno/cli run --reporter-junit results.xml
+docker run -v $(pwd):/bruno tanyun/cli run --reporter-junit results.xml
 ```
 
 For Windows CMD users, swap `$(pwd)` with `%cd%`:
 
 ```cmd
-docker run -v %cd%:/bruno usebruno/cli run 
+docker run -v %cd%:/bruno tanyun/cli run 
 ```
 
 #### Running a collection that lives at a different path
@@ -120,16 +120,16 @@ If your collection is not in your current directory, point `docker` at its path 
 
 ```bash
 # run every request in a collection at an arbitrary path
-docker run -v /path/to/your/collection:/bruno usebruno/cli run
+docker run -v /path/to/your/collection:/bruno tanyun/cli run
 
 # run a single .bru file from a collection at an arbitrary path
-docker run -v /path/to/your/collection:/bruno usebruno/cli run ./auth/login.bru
+docker run -v /path/to/your/collection:/bruno tanyun/cli run ./auth/login.bru
 ```
 
 > **Note on `--rm`:** Examples below include `--rm`. Docker keeps stopped containers around after they exit, which lets you `docker logs` or `docker inspect` them later for debugging. If you'd rather have Docker auto-delete the container as soon as `bru` finishes — useful for CI runs or to avoid `docker ps -a` filling up with stale entries — append `--rm` to any `docker run` (or `docker compose run`) command:
 
 ```bash
-docker run --rm -v $(pwd):/bruno usebruno/cli run
+docker run --rm -v $(pwd):/bruno tanyun/cli run
 ```
 
 > It's purely a cleanup convenience; it doesn't affect the image, mounts, stdout output, or exit code.
@@ -150,7 +150,7 @@ jobs:
         run: |
           docker run --rm \
             -v ${{ github.workspace }}:/bruno \
-            usebruno/cli:latest run --output results.xml --format junit
+            tanyun/cli:latest run --output results.xml --format junit
 
       - name: Publish Test Report
         uses: dorny/test-reporter@v3
@@ -165,7 +165,7 @@ jobs:
 
 ```yaml
 api-tests:
-  image: usebruno/cli:latest
+  image: tanyun/cli:latest
   script:
     - bru run --output results.xml --format junit
   artifacts:
@@ -184,7 +184,7 @@ A minimal `docker-compose.yml` for running a Bruno collection alongside your pro
 ```yaml
 services:
   bruno-cli:
-    image: usebruno/cli:latest
+    image: tanyun/cli:latest
     container_name: bruno-cli-runner
     volumes:
       - /path/to/collection:/bruno
@@ -208,7 +208,7 @@ The `/path/to/reports:/reports` mount catches the JSON, JUnit XML, and HTML repo
 
 ### Try it from this repo
 
-A ready-to-run `docker-compose.yml` lives in this repo at [`packages/bruno-tests/docker-compose.yml`](https://github.com/usebruno/bruno/blob/main/packages/bruno-tests/docker-compose.yml). It mounts the sibling `collection/` directory into the container, runs the `echo` folder against the `Prod` environment, and writes JSON, JUnit XML, and HTML reports into `packages/bruno-tests/reports/`:
+A ready-to-run `docker-compose.yml` lives in this repo at [`packages/bruno-tests/docker-compose.yml`](https://github.com/CodeCoreLab/tanyun-api/blob/main/packages/bruno-tests/docker-compose.yml). It mounts the sibling `collection/` directory into the container, runs the `echo` folder against the `Prod` environment, and writes JSON, JUnit XML, and HTML reports into `packages/bruno-tests/reports/`:
 
 ```bash
 cd packages/bruno-tests

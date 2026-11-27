@@ -1,14 +1,12 @@
 <br />
 <img src="../../assets/images/logo-transparent.png" width="80"/>
 
-### 探云 API (TanyunAPI) - IDE Opensource pour explorer et tester des APIs.
+### TanyunAPI - IDE open source pour explorer et tester des API
 
-[![GitHub version](https://badge.fury.io/gh/usebruno%2Fbruno.svg)](https://badge.fury.io/gh/usebruno%2Fbruno)
-[![CI](https://github.com/usebruno/bruno/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/usebruno/bruno/actions/workflows/tests.yml)
-[![Commit Activity](https://img.shields.io/github/commit-activity/m/usebruno/bruno)](https://github.com/usebruno/bruno/pulse)
-[![X](https://img.shields.io/twitter/follow/use_bruno?style=social&logo=x)](https://twitter.com/use_bruno)
-[![Website](https://img.shields.io/badge/Website-Visit-blue)](https://www.usebruno.com)
-[![Download](https://img.shields.io/badge/Download-Latest-brightgreen)](https://www.usebruno.com/downloads)
+[![Website](https://img.shields.io/badge/Website-Visit-blue)](https://github.com/CodeCoreLab/tanyun-api#readme)
+[![Repo](https://img.shields.io/badge/Repository-GitHub-brightgreen)](https://github.com/CodeCoreLab/tanyun-api)
+
+> Client API de bureau open source à architecture auto-développée.
 
 [English](../../readme.md)
 | [Українська](./readme_ua.md)
@@ -28,122 +26,149 @@
 | [العربية](./readme_ar.md)
 | [日本語](./readme_ja.md)
 | [ქართული](./readme_ka.md)
+| [Nederlands](./readme_nl.md)
+| [فارسی](./readme_fa.md)
 | [हिन्दी](./readme_hi.md)
 
-Bruno est un nouveau client API, innovant, qui a pour but de révolutionner le _statu quo_ que représentent Postman et les autres outils.
+TanyunAPI est un client API de bureau open source à architecture auto-développée, pour HTTP / gRPC / GraphQL / WebSocket et la régression de collections.
 
-Bruno sauvegarde vos collections directement sur votre système de fichiers. Nous utilisons un langage de balise de type texte pour décrire les requêtes API.
+TanyunAPI stocke les collections API directement dans le système de fichiers local, sous forme de fichiers texte.
 
-Vous pouvez utiliser git ou tout autre gestionnaire de version pour travailler de manière collaborative sur vos collections d'APIs.
+Collaborate on collections with Git or any version control system.
 
-Bruno ne fonctionne qu'en mode déconnecté. Il n'y a pas d'abonnement ou de synchronisation avec le cloud Bruno, il n'y en aura jamais. Nous sommes conscients de la confidentialité de vos données et nous sommes convaincus qu'elles doivent rester sur vos appareils. Vous pouvez lire notre vision à long terme [ici (en anglais)](https://github.com/usebruno/bruno/discussions/269).
+TanyunAPI is offline-first and does not require cloud sync; data stays on your machine by default.
 
-📢 Regardez notre présentation récente lors de la conférence India FOSS 3.0 (en anglais) [ici](https://www.youtube.com/watch?v=7bSMFpbcPiY)
+Repository: [CodeCoreLab/tanyun-api](https://github.com/CodeCoreLab/tanyun-api)
 
-![bruno](/assets/images/landing-2.png) <br /><br />
+![tanyun](../../assets/images/landing-2-dark.png#gh-light-mode-only)
+![tanyun](../../assets/images/landing-2-light.png#gh-dark-mode-only) <br /><br />
 
-### Installation
+## Table of Contents
 
-Bruno est disponible au téléchargement [sur notre site web](https://www.usebruno.com/downloads), pour Mac, Windows et Linux.
+- [Installation](#installation)
+- [CLI](#cli)
+- [Run with Docker](#run-with-docker)
+- [Features](#features)
+  - [Run across multiple platforms 🖥️](#run-across-multiple-platforms-%EF%B8%8F)
+  - [Collaborate via Git 👩‍💻🧑‍💻](#collaborate-via-git-%E2%80%8D%E2%80%8D)
+- [Important Links 📌](#important-links-)
+- [Showcase 🎥](#showcase-)
+- [Share Testimonials 📣](#share-testimonials-)
+- [Publishing to New Package Managers](#publishing-to-new-package-managers)
+- [Stay in touch 🌐](#stay-in-touch-)
+- [Trademark](#trademark)
+- [Contribute 👩‍💻🧑‍💻](#contribute-%E2%80%8D%E2%80%8D)
+- [Authors](#authors)
+- [License 📄](#license-)
 
-Vous pouvez aussi installer Bruno via un gestionnaire de paquets, comme Homebrew, Chocolatey, Scoop, Snap et Apt.
+## Installation
+
+探云 API 可通过本仓库 Releases 获取桌面端构建产物（Mac / Windows / Linux），具体安装步骤见发布说明。
 
 ```sh
-# Mac via Homebrew
-brew install bruno
-
-# Windows via Chocolatey
-choco install bruno
-
-# Windows via Scoop
-scoop bucket add extras
-scoop install bruno
-
-# Linux via Snap
-snap install bruno
-
-# Linux via Apt
-sudo mkdir -p /etc/apt/keyrings
-sudo apt update && sudo apt install gpg curl
-curl -fsSL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x9FA6017ECABE0266" \
-  | gpg --dearmor \
-  | sudo tee /etc/apt/keyrings/bruno.gpg > /dev/null
-sudo chmod 644 /etc/apt/keyrings/bruno.gpg
-echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/bruno.gpg] http://debian.usebruno.com/ bruno stable" \
-  | sudo tee /etc/apt/sources.list.d/bruno.list
-sudo apt update && sudo apt install bruno
+# 克隆源码本地开发
+git clone https://github.com/CodeCoreLab/tanyun-api.git
+cd tanyun-api
+npm install
+npm run dev
 ```
 
-### Fonctionne sur de multiples plateformes 🖥️
+## CLI
 
-![bruno](/assets/images/run-anywhere.png) <br /><br />
+The **CLI** lets you run your API collections from the command line, which is ideal for automated testing and CI/CD pipelines. Install it from npm using the package manager of your choice:
 
-### Collaborer via Git 👩‍💻🧑‍💻
+```sh
+npm install -g @tanyun/cli
+```
 
-Ou n'importe quel système de gestion de sources
+Navigate to the directory containing your collection and run it:
 
-![bruno](/assets/images/version-control.png) <br /><br />
+```sh
+# Run every request in the collection
+bru run
 
-### Liens importants 📌
+# Run a single request
+bru run request.yml
 
-- [Notre vision à long terme (en anglais)](https://github.com/usebruno/bruno/discussions/269)
-- [Roadmap](https://github.com/usebruno/bruno/discussions/384)
-- [Documentation](https://docs.usebruno.com)
-- [Site web](https://www.usebruno.com)
-- [Prix](https://www.usebruno.com/pricing)
-- [Téléchargement](https://www.usebruno.com/downloads)
-- [Sponsors GitHub](https://github.com/sponsors/helloanoop)
+# Run a folder against a specific environment
+bru run folder --env Local
+```
 
-### Showcase 🎥
+For the full command reference, see the CLI help (`tanyun --help`) and repository docs.
 
-- [Témoignages](https://github.com/usebruno/bruno/discussions/343)
-- [Centre de connaissance](https://github.com/usebruno/bruno/discussions/386)
-- [Scriptmania](https://github.com/usebruno/bruno/discussions/385)
+## Run with Docker
 
-### Soutien ❤️
+Official Docker images for the **CLI** let you run API collections in CI/CD pipelines and locally without installing Node.js or npm on the host. Build from `Dockerfile` in this repository; `alpine` and `debian` variants support `linux/amd64` and `linux/arm64`.
 
-Si vous aimez Bruno et que vous souhaitez soutenir le travail _opensource_, pensez à devenir un sponsor via la page [Github Sponsors](https://github.com/sponsors/helloanoop).
+```sh
+# 本地构建 CLI 镜像
+docker build -f packages/bruno-cli/docker/images/alpine/Dockerfile -t tanyun-cli .
 
-### Partage de témoignages 📣
+# 挂载当前目录运行集合
+docker run -v "$(pwd):/collections" tanyun-cli run collections/
+```
 
-Si Bruno vous a aidé dans votre travail, au sein de votre équipe, merci de penser à partager votre témoignage sur la [page discussion GitHub dédiée](https://github.com/usebruno/bruno/discussions/343)
+For Docker image build and CI examples, see `Dockerfile` and `.github/workflows` in this repository.
 
-### Publier Bruno sur un nouveau gestionnaire de paquets
+## Features
 
-Veuillez regarder [ici](../publishing/publishing_fr.md) pour plus d'information.
+### Run across multiple platforms 🖥️
 
-### Contribuer 👩‍💻🧑‍💻
+![tanyun](../../assets/images/run-anywhere.png) <br /><br />
 
-Je suis heureux de voir que vous cherchez à améliorer Bruno. Merci de consulter le [guide de contribution](../contributing/contributing_fr.md)
+### Collaborate via Git 👩‍💻🧑‍💻
 
-Même si vous n'êtes pas en mesure de contribuer directement via du code, n'hésitez pas à consigner les bogues et les demandes de nouvelles fonctionnalités pour résoudre vos cas d'usage !
+Or any version control system of your choice
 
-### Auteurs
+![tanyun](../../assets/images/version-control.png) <br /><br />
 
-<div align="center">
-    <a href="https://github.com/usebruno/bruno/graphs/contributors">
-        <img src="https://contrib.rocks/image?repo=usebruno/bruno" />
-    </a>
-</div>
+## Important Links 📌
 
-### Restons en contact 🌐
+- [Repository](https://github.com/CodeCoreLab/tanyun-api)
+- [Releases](https://github.com/CodeCoreLab/tanyun-api/releases)
 
-[Twitter](https://twitter.com/use_bruno) <br />
-[Website](https://www.usebruno.com) <br />
+## Showcase 🎥
+
+
+## Share Testimonials 📣
+
+If TanyunAPI has helped you at work and your teams, please share feedback via [GitHub Issues](https://github.com/CodeCoreLab/tanyun-api/issues).
+
+## Publishing to New Package Managers
+
+Please see [here](../../publishing.md) for more information.
+
+## Stay in touch 🌐
+
+
+[Repository](https://github.com/CodeCoreLab/tanyun-api) <br />
 [Discord](https://discord.com/invite/KgcZUncpjq) <br />
-[LinkedIn](https://www.linkedin.com/company/usebruno)
+[Repository](https://github.com/CodeCoreLab/tanyun-api)
 
-### Marque
+## Trademark
 
-**Nom**
+**Name**
 
-`Bruno` est une marque appartenant à [Anoop M D](https://www.helloanoop.com/)
+`TanyunAPI` is a trademark held by [Anoop M D](https://www.helloanoop.com/)
 
 **Logo**
 
-Le logo est issu de [OpenMoji](https://openmoji.org/library/emoji-1F436/).
-Licence : CC [BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+The logo is sourced from [OpenMoji](https://openmoji.org/library/emoji-1F436/). License: CC [BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 
-### Licence 📄
+## Contribute 👩‍💻🧑‍💻
+
+I am happy that you are looking to improve TanyunAPI. Please check out the [contributing guide](../../contributing.md)
+
+Even if you are not able to make contributions via code, please don't hesitate to file bugs and feature requests that needs to be implemented to solve your use case.
+
+## Authors
+
+<div align="center">
+    <a href="https://github.com/CodeCoreLab/tanyun-api/graphs/contributors">
+        <img src="https://contrib.rocks/image?repo=CodeCoreLab/tanyun-api" />
+    </a>
+</div>
+
+## License 📄
 
 [MIT](../../license.md)

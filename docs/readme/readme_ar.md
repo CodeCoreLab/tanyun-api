@@ -1,14 +1,12 @@
 <br />
 <img src="../../assets/images/logo-transparent.png" width="80"/>
 
-### برونو - بيئة تطوير مفتوحة المصدر لاستكشاف واختبار واجهات برمجة التطبيقات (APIs).
+### TanyunAPI - برمجية مفتوحة المصدر لاستكشاف واختبار واجهات API
 
-[![GitHub version](https://badge.fury.io/gh/usebruno%2Fbruno.svg)](https://badge.fury.io/gh/usebruno%2Fbruno)
-[![CI](https://github.com/usebruno/bruno/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/usebruno/bruno/actions/workflows/tests.yml)
-[![Commit Activity](https://img.shields.io/github/commit-activity/m/usebruno/bruno)](https://github.com/usebruno/bruno/pulse)
-[![X](https://img.shields.io/twitter/follow/use_bruno?style=social&logo=x)](https://twitter.com/use_bruno)
-[![Website](https://img.shields.io/badge/Website-Visit-blue)](https://www.usebruno.com)
-[![Download](https://img.shields.io/badge/Download-Latest-brightgreen)](https://www.usebruno.com/downloads)
+[![Website](https://img.shields.io/badge/Website-Visit-blue)](https://github.com/CodeCoreLab/tanyun-api#readme)
+[![Repo](https://img.shields.io/badge/Repository-GitHub-brightgreen)](https://github.com/CodeCoreLab/tanyun-api)
+
+> عميل API سطح مكتب مفتوح المصدر ببنية معمارية تطوير ذاتي.
 
 [English](../../readme.md)
 | [Українська](./readme_ua.md)
@@ -28,126 +26,149 @@
 | **العربية**
 | [日本語](./readme_ja.md)
 | [ქართული](./readme_ka.md)
+| [Nederlands](./readme_nl.md)
+| [فارسی](./readme_fa.md)
 | [हिन्दी](./readme_hi.md)
 
-برونو هو عميل API جديد ومبتكر، يهدف إلى ثورة الحالة الحالية التي يمثلها برنامج Postman وأدوات مماثلة هناك.
+TanyunAPI عميل API سطح مكتب مفتوح المصدر ببنية معمارية تطوير ذاتي، لـ HTTP / gRPC / GraphQL / WebSocket واختبارات التراجع للمجموعات.
 
-يقوم برونو بتخزين مجموعاتك مباشرة في مجلد على نظام الملفات الخاص بك. نحن نستخدم لغة ترميز النص العادية، Bru، لحفظ معلومات حول طلبات واجهة برمجة التطبيقات (API).
+يخزن TanyunAPI مجموعات API مباشرة في نظام الملفات المحلي كملفات نصية عادية.
 
-يمكنك استخدام Git أو أي نظام تحكم في الإصدار الذي تفضله للتعاون على مجموعات API الخاصة بك.
+Collaborate on collections with Git or any version control system.
 
-برونو هو خاص بالاستخدام دون اتصال بالإنترنت. ليس هناك خطط لإضافة مزامنة السحابة إلى برونو أبدًا. نحن نقدر خصوصية بياناتك ونعتقد أنه يجب أن تظل على جهازك. اقرأ رؤيتنا على المدى الطويل [هنا](https://github.com/usebruno/bruno/discussions/269)
+TanyunAPI is offline-first and does not require cloud sync; data stays on your machine by default.
 
-📢 شاهد حديثنا الأخير في مؤتمر India FOSS 3.0 [هنا](https://www.youtube.com/watch?v=7bSMFpbcPiY)
+Repository: [CodeCoreLab/tanyun-api](https://github.com/CodeCoreLab/tanyun-api)
 
-![bruno](/assets/images/landing-2.png) <br /><br />
+![tanyun](../../assets/images/landing-2-dark.png#gh-light-mode-only)
+![tanyun](../../assets/images/landing-2-light.png#gh-dark-mode-only) <br /><br />
 
+## Table of Contents
 
-### التثبيت
+- [Installation](#installation)
+- [CLI](#cli)
+- [Run with Docker](#run-with-docker)
+- [Features](#features)
+  - [Run across multiple platforms 🖥️](#run-across-multiple-platforms-%EF%B8%8F)
+  - [Collaborate via Git 👩‍💻🧑‍💻](#collaborate-via-git-%E2%80%8D%E2%80%8D)
+- [Important Links 📌](#important-links-)
+- [Showcase 🎥](#showcase-)
+- [Share Testimonials 📣](#share-testimonials-)
+- [Publishing to New Package Managers](#publishing-to-new-package-managers)
+- [Stay in touch 🌐](#stay-in-touch-)
+- [Trademark](#trademark)
+- [Contribute 👩‍💻🧑‍💻](#contribute-%E2%80%8D%E2%80%8D)
+- [Authors](#authors)
+- [License 📄](#license-)
 
-برونو متاح كتنزيل ثنائي [على موقعنا على الويب](https://www.usebruno.com/downloads) لأنظمة التشغيل Mac و Windows و Linux.
+## Installation
 
-يمكنك أيضًا تثبيت برونو عبر مديري الحزم مثل Homebrew و Chocolatey و Scoop و Snap و Flatpak و Apt.
+探云 API 可通过本仓库 Releases 获取桌面端构建产物（Mac / Windows / Linux），具体安装步骤见发布说明。
 
 ```sh
-# على نظام Mac عبر Homebrew
-brew install bruno
-
-# على نظام Windows عبر Chocolatey
-choco install bruno
-
-# على نظام Windows عبر Scoop
-scoop bucket add extras
-scoop install bruno
-
-# على نظام Linux عبر Snap
-snap install bruno
-
-# على نظام Linux عبر Flatpak
-flatpak install com.usebruno.Bruno
-
-# على نظام Linux عبر Apt
-sudo mkdir -p /etc/apt/keyrings
-sudo apt update && sudo apt install gpg curl
-curl -fsSL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x9FA6017ECABE0266" \
-  | gpg --dearmor \
-  | sudo tee /etc/apt/keyrings/bruno.gpg > /dev/null
-sudo chmod 644 /etc/apt/keyrings/bruno.gpg
-echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/bruno.gpg] http://debian.usebruno.com/ bruno stable" \
-  | sudo tee /etc/apt/sources.list.d/bruno.list
-sudo apt update && sudo apt install bruno
+# 克隆源码本地开发
+git clone https://github.com/CodeCoreLab/tanyun-api.git
+cd tanyun-api
+npm install
+npm run dev
 ```
 
-### التشغيل عبر منصات متعددة 🖥️
+## CLI
 
-![bruno](/assets/images/run-anywhere.png) <br /><br />
+The **CLI** lets you run your API collections from the command line, which is ideal for automated testing and CI/CD pipelines. Install it from npm using the package manager of your choice:
 
-### التعاون عبر Git 👩‍💻🧑‍💻
+```sh
+npm install -g @tanyun/cli
+```
 
-أو أي نظام تحكم في الإصدار الذي تفضله
+Navigate to the directory containing your collection and run it:
 
-![bruno](/assets/images/version-control.png) <br /><br />
+```sh
+# Run every request in the collection
+bru run
 
-### الروابط المهمة 📌
+# Run a single request
+bru run request.yml
 
-- [رؤيتنا على المدى الطويل](https://github.com/usebruno/bruno/discussions/269)
-- [خارطة الطريق](https://github.com/usebruno/bruno/discussions/384)
-- [التوثيق](https://docs.usebruno.com)
-- [Stack Overflow](https://stackoverflow.com/questions/tagged/bruno)
-- [الموقع الإلكتروني](https://www.usebruno.com)
-- [التسعير](https://www.usebruno.com/pricing)
-- [التنزيل](https://www.usebruno.com/downloads)
-- [Github Sponsors](https://github.com/sponsors/helloanoop).
+# Run a folder against a specific environment
+bru run folder --env Local
+```
 
-### عروض 🎥
+For the full command reference, see the CLI help (`tanyun --help`) and repository docs.
 
-- [الشهادات](https://github.com/usebruno/bruno/discussions/343)
-- [مركز المعرفة](https://github.com/usebruno/bruno/discussions/386)
-- [Scriptmania](https://github.com/usebruno/bruno/discussions/385)
+## Run with Docker
 
-### الدعم ❤️
+Official Docker images for the **CLI** let you run API collections in CI/CD pipelines and locally without installing Node.js or npm on the host. Build from `Dockerfile` in this repository; `alpine` and `debian` variants support `linux/amd64` and `linux/arm64`.
 
-إذا كنت تحب برونو وترغب في دعم عملنا مفتوح المصدر، فكر في رعايتنا عبر [Github Sponsors](https://github.com/sponsors/helloanoop).
+```sh
+# 本地构建 CLI 镜像
+docker build -f packages/bruno-cli/docker/images/alpine/Dockerfile -t tanyun-cli .
 
-### شارك الشهادات 📣
+# 挂载当前目录运行集合
+docker run -v "$(pwd):/collections" tanyun-cli run collections/
+```
 
-إذا كان برونو قد ساعدك في العمل وفرقك، فلا تنسى مشاركة [شهاداتك في مناقشتنا على GitHub](https://github.com/usebruno/bruno/discussions/343)
+For Docker image build and CI examples, see `Dockerfile` and `.github/workflows` in this repository.
 
-### نشر إلى مديري الحزم الجديدة
+## Features
 
-يرجى الرجوع [هنا](../../publishing.md) لمزيد من المعلومات.
+### Run across multiple platforms 🖥️
 
-### تواصل معنا 🌐
+![tanyun](../../assets/images/run-anywhere.png) <br /><br />
 
-[𝕏 (تويتر)](https://twitter.com/use_bruno) <br />
-[الموقع الإلكتروني](https://www.usebruno.com) <br />
-[ديسكورد](https://discord.com/invite/KgcZUncpjq) <br />
-[لينكدإن](https://www.linkedin.com/company/usebruno)
+### Collaborate via Git 👩‍💻🧑‍💻
 
-### علامة تجارية
+Or any version control system of your choice
 
-**الاسم**
+![tanyun](../../assets/images/version-control.png) <br /><br />
 
-`برونو` هو علامة تجارية تمتلكها [أنوب إم دي](https://www.helloanoop.com/)
+## Important Links 📌
 
-**الشعار**
+- [Repository](https://github.com/CodeCoreLab/tanyun-api)
+- [Releases](https://github.com/CodeCoreLab/tanyun-api/releases)
 
-الشعار من [OpenMoji](https://openmoji.org/library/emoji-1F436/). الترخيص: CC [BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+## Showcase 🎥
 
-### المساهمة 👩‍💻🧑‍💻
 
-يسعدني أنك تتطلع لتحسين برونو. يرجى الاطلاع على [دليل المساهمة](../../contributing.md)
+## Share Testimonials 📣
 
-حتى إذا لم تكن قادرًا على التساهم بشكل مباشر من خلال الشيفرة، فلا تتردد في الإبلاغ عن الأخطاء وطلب الميزات التي يجب تنفيذها لحل حالتك.
+If TanyunAPI has helped you at work and your teams, please share feedback via [GitHub Issues](https://github.com/CodeCoreLab/tanyun-api/issues).
 
-### الكتّاب
+## Publishing to New Package Managers
+
+Please see [here](../../publishing.md) for more information.
+
+## Stay in touch 🌐
+
+
+[Repository](https://github.com/CodeCoreLab/tanyun-api) <br />
+[Discord](https://discord.com/invite/KgcZUncpjq) <br />
+[Repository](https://github.com/CodeCoreLab/tanyun-api)
+
+## Trademark
+
+**Name**
+
+`TanyunAPI` is a trademark held by [Anoop M D](https://www.helloanoop.com/)
+
+**Logo**
+
+The logo is sourced from [OpenMoji](https://openmoji.org/library/emoji-1F436/). License: CC [BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+
+## Contribute 👩‍💻🧑‍💻
+
+I am happy that you are looking to improve TanyunAPI. Please check out the [contributing guide](../../contributing.md)
+
+Even if you are not able to make contributions via code, please don't hesitate to file bugs and feature requests that needs to be implemented to solve your use case.
+
+## Authors
 
 <div align="center">
-    <a href="https://github.com/usebruno/bruno/graphs/contributors">
-        <img src="https://contrib.rocks/image?repo=usebruno/bruno" />
+    <a href="https://github.com/CodeCoreLab/tanyun-api/graphs/contributors">
+        <img src="https://contrib.rocks/image?repo=CodeCoreLab/tanyun-api" />
     </a>
 </div>
 
-### الرخصة 📄
+## License 📄
 
 [MIT](../../license.md)
