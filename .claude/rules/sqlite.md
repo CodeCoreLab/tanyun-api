@@ -7,7 +7,7 @@ paths:
 
 # SQLite SDK (`@usebruno/sqlite`)
 
-Bruno's local database layer. You author **migrations** (`migrations/*.ts`) and **statements**
+TanyunAPI's local database layer. You author **migrations** (`migrations/*.ts`) and **statements**
 (`statements/*.sql`); a codegen step compiles them into a typed data layer for the Electron main
 process, which owns the database and executes statements. The package has no renderer entry point:
 the renderer reaches a statement only through an IPC handler written by hand for that statement in
@@ -19,7 +19,7 @@ IPC handler, statement, or option that accepts SQL text or a statement name from
 
 ## When to use it — and when not to
 
-Use it for state that is **derived, bulky, or secondary**: data Bruno can rebuild or lose without
+Use it for state that is **derived, bulky, or secondary**: data TanyunAPI can rebuild or lose without
 corrupting anything the user authored, and that would bloat Redux or the IPC payloads if held in
 memory.
 
@@ -84,11 +84,11 @@ Migrations run at open time, in sequence order, each in its own transaction, and
   `does not match the migration already applied`, and `createDatabase` responds by **deleting the
   user's database and rebuilding it**. Add a new migration instead — always.
 - **`down` must genuinely revert `up`.** It is not decoration: when the tail migration disappears
-  from the code (a user downgrading Bruno, or you switching branches), the recorded `down` is
+  from the code (a user downgrading TanyunAPI, or you switching branches), the recorded `down` is
   executed automatically against the existing database. An empty or wrong `down` corrupts that path.
 - Only the **tail** rolls back (recorded sequences above the highest local one). Deleting a
   migration from the middle silently leaves its schema in place — don't.
-- Design schema changes to tolerate an older Bruno opening the same file afterwards: prefer new
+- Design schema changes to tolerate an older TanyunAPI opening the same file afterwards: prefer new
   tables and nullable columns over reshaping an existing one.
 
 Verify against a real database rather than an empty one — this replays every migration on a

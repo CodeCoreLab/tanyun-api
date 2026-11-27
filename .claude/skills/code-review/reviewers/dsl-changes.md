@@ -10,7 +10,7 @@ made there won't be caught by the serialization layer, so they're all in scope.
 Adopt the reviewer persona and return findings in the output contract defined in
 `_contract.md`.
 
-Review the diff against **`.claude/rules/dsl-changes.md`** (read it) — Bruno persists
+Review the diff against **`.claude/rules/dsl-changes.md`** (read it) — TanyunAPI persists
 collections/requests/environments/config as `.bru` and `.yml` files read across app versions, so
 backward compatibility is the priority. Report violations with `file:line`, severity:
 

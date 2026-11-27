@@ -13,7 +13,7 @@ paths:
 
 # On-Disk DSL & Serialization Changes
 
-Bruno persists everything users create — collections, requests, environments, folders, and
+TanyunAPI persists everything users create — collections, requests, environments, folders, and
 config — as plain-text files on the user's disk and in their Git repos. Two on-disk formats
 exist:
 
@@ -31,7 +31,7 @@ exist:
 serialization path; a DSL change never needs it. `preferences.json` is app-level electron-store
 state under `userData`, not part of a collection's on-disk contract, so it is out of scope here.)
 
-These files outlive the version that wrote them: an older Bruno reads files written by a
+These files outlive the version that wrote them: an older TanyunAPI reads files written by a
 newer one, teammates on different versions share the same repo, and users hand-commit these
 files. **A change to the on-disk shape is a change to a public contract.** Get it wrong and
 you break parsing, corrupt collections, or silently drop user data — on collections you

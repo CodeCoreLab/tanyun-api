@@ -5,7 +5,7 @@ paths:
 
 # Co-Related Features & Parity Surfaces
 
-Bruno implements the same behaviour more than once — app vs CLI, `.bru` vs `.yml`, filestore vs
+TanyunAPI implements the same behaviour more than once — app vs CLI, `.bru` vs `.yml`, filestore vs
 converters, implementation vs QuickJS shim. **A change to one side of a pair is not a finished
 change**: the other side silently keeps the old behaviour and ships. The symptom is never a broken
 build — it's a feature that works in the app but not in `bru run`, a field that survives save but
@@ -63,7 +63,7 @@ hand:
 |---|---|---|
 | Types | `bruno-schema-types/src/collection/item.ts` | type drift |
 | Yup schema | `bruno-schema/src/collections/index.js` — `.noUnknown(true)`, cast output is persisted | **silently stripped on save** |
-| App save transform | `bruno-app/src/utils/collections/index.js` — `transformRequestToSaveToFilesystem`, `transform{Collection,Folder}RootToSave`, `transformCollectionToSaveToExportAsFile` | dropped before reaching disk / Bruno JSON export |
+| App save transform | `bruno-app/src/utils/collections/index.js` — `transformRequestToSaveToFilesystem`, `transform{Collection,Folder}RootToSave`, `transformCollectionToSaveToExportAsFile` | dropped before reaching disk / TanyunAPI JSON export |
 | On-disk formats | `bruno-filestore/src/formats/{bru,yml}` (+ `bruno-lang`) — parse **and** stringify | lost in one format |
 | BRU → YML migration | `bruno-electron/src/ipc/yml-migration.js` (bru parse → yml stringify) | lost when a user migrates |
 | Collection config | `bruno.json` ↔ `opencollection.yml` — `utils/transformBrunoConfig.js`, `stringifyCollection`, migration's config transform (e.g. `transformProxyConfig`), CLI `getCollectionConfig` | config lost or misread by CLI |
@@ -120,5 +120,5 @@ A new auth mode or a setting that changes the wire request should change the gen
 - [ ] Tests on **both** sides of every pair touched
 
 Human-facing version of this map (for QA): Confluence *Related Feature Map — Change Impact &
-Parity Checklist*, https://usebruno.atlassian.net/wiki/spaces/Bruno/pages/1376944136. Keep the two
+Parity Checklist*, https://example.atlassian.net/wiki/spaces/TanyunAPI/pages/1376944136. Keep the two
 in step: add new pairings to both, and remove unified ones from both.

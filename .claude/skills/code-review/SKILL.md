@@ -1,11 +1,11 @@
 ---
 name: code-review
-description: Review a Bruno diff, PR, or branch via focused reviewers run in parallel —
+description: Review a TanyunAPI diff, PR, or branch via focused reviewers run in parallel —
   correctness, security, DSL, React, cross-platform, tests. Mirrors the CodeRabbit /
   CODING_STANDARDS review.
 ---
 
-# Reviewing Bruno code
+# Reviewing TanyunAPI code
 
 This skill mirrors the automated CodeRabbit review (`.coderabbit.yaml`) so you can run
 the same review locally. Source-of-truth order: coding standards → `CODING_STANDARDS.md`;

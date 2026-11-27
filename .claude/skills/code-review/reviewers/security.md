@@ -5,8 +5,8 @@
 Adopt the reviewer persona and return findings in the output contract defined in
 `_contract.md`.
 
-Bruno is an offline API client that handles user credentials, tokens, and runs
-user-authored scripts in a sandbox. Review changes for these Bruno-specific risks:
+TanyunAPI is an offline API client that handles user credentials, tokens, and runs
+user-authored scripts in a sandbox. Review changes for these TanyunAPI-specific risks:
 
 - **No secret leakage.** Auth tokens, passwords, API keys, OAuth2 secrets, and env-var
   values must never be written to logs, console, error messages, or telemetry. A secret
@@ -25,6 +25,6 @@ user-authored scripts in a sandbox. Review changes for these Bruno-specific risk
 - **Injection & unsafe eval.** Flag string-built shell commands, `eval`, or dynamic
   `Function` on untrusted input, and unescaped interpolation into commands or queries.
 - **Dependency & network surface.** Note new runtime dependencies or outbound network calls
-  that don't fit Bruno's offline-first, privacy-first posture.
+  that don't fit TanyunAPI's offline-first, privacy-first posture.
 
 Keep findings concrete — tie each to how the tainted value reaches the sink.

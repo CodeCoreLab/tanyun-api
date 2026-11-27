@@ -1,11 +1,11 @@
 ---
 name: write-e2e-test
-description: Write a Playwright E2E test for Bruno. Use when adding or modifying
+description: Write a Playwright E2E test for TanyunAPI. Use when adding or modifying
   tests under tests/, creating a new test suite, or reproducing a bug as an
   e2e spec.
 ---
 
-# Writing a Bruno E2E test
+# Writing a TanyunAPI E2E test
 
 Read `.claude/rules/testing.md` first for the full fixture and helper reference. See
 `docs/playwright-testing-guide.md` for the extended walkthrough (codegen, running,
@@ -59,7 +59,7 @@ and projects are `default`, `system-pac`, `auth`, and `ssl`
 
 6. **Wait for readiness**: `await page.locator('[data-app-state="loaded"]').waitFor()`
    before asserting on app state.
-7. **Locate** by `data-testid` (Bruno's dominant convention) or documented classes
+7. **Locate** by `data-testid` (TanyunAPI's dominant convention) or documented classes
    (`.collection-item-name`); stable `getByRole` / `getByText` locators are fine too.
    Avoid brittle CSS, `#id`, or index-based selectors. If no stable selector exists, add a
    `data-testid` to the component rather than locating by text.
