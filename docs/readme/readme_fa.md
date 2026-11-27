@@ -34,9 +34,9 @@ TanyunAPI یک کلاینت دسکتاپ API متن‌باز با معماری �
 
 TanyunAPI مجموعه‌های API را مستقیماً در سیستم‌فایل محلی به‌صورت فایل‌های متنی ذخیره می‌کند.
 
-Collaborate on collections with Git or any version control system.
+روی مجموعه‌ها با Git یا هر سامانه کنترل نسخه‌ای دیگر همکاری کنید.
 
-TanyunAPI is offline-first and does not require cloud sync; data stays on your machine by default.
+TanyunAPI آفلاین-اول است و نیازی به همگام‌سازی ابری ندارد؛ داده‌ها به‌صورت پیش‌فرض روی دستگاه شما می‌مانند.
 
 Repository: [CodeCoreLab/tanyun-api](https://github.com/CodeCoreLab/tanyun-api)
 

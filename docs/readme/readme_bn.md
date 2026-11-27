@@ -34,9 +34,9 @@ TanyunAPI নিজস্ব স্থাপত্যে তৈরি ওপে�
 
 TanyunAPI API কালেকশন সরাসরি লোকাল ফাইলসিস্টেমে সাধারণ টেক্সট ফাইল হিসেবে সংরক্ষণ করে।
 
-Collaborate on collections with Git or any version control system.
+Git বা আপনার পছন্দের যেকোনো ভার্সন কন্ট্রোল সিস্টেম দিয়ে কালেকশনে সহযোগিতা করুন।
 
-TanyunAPI is offline-first and does not require cloud sync; data stays on your machine by default.
+TanyunAPI অফলাইন-ফার্স্ট এবং ক্লাউড সিঙ্ক বাধ্যতামূলক নয়; ডিফল্টভাবে ডেটা আপনার মেশিনেই থাকে।
 
 Repository: [CodeCoreLab/tanyun-api](https://github.com/CodeCoreLab/tanyun-api)
 

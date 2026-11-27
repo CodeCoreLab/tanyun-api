@@ -34,9 +34,9 @@ TanyunAPI არის საკუთარი არქიტექტურ�
 
 TanyunAPI ინახავს API კოლექციებს პირდაპირ ლოკალურ ფაილურ სისტემაში, ჩვეულებრივი ტექსტური ფაილების სახით.
 
-Collaborate on collections with Git or any version control system.
+ითანამშრომლეთ კოლექციებზე Git-ით ან ნებისმიერი სხვა ვერსიის მართვის სისტემით.
 
-TanyunAPI is offline-first and does not require cloud sync; data stays on your machine by default.
+TanyunAPI ოფლაინ-პირველობით მუშაობს და ღრუბლოვან სინქრონიზაციას არ მოითხოვს; მონაცემები ნაგულისხმევად თქვენს მოწყობილობაზე რჩება.
 
 Repository: [CodeCoreLab/tanyun-api](https://github.com/CodeCoreLab/tanyun-api)
 

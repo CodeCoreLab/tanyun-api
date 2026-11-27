@@ -34,9 +34,9 @@ TanyunAPI عميل API سطح مكتب مفتوح المصدر ببنية معم
 
 يخزن TanyunAPI مجموعات API مباشرة في نظام الملفات المحلي كملفات نصية عادية.
 
-Collaborate on collections with Git or any version control system.
+تعاون في إدارة المجموعات باستخدام Git أو أي نظام تحكم بالإصدارات تفضله.
 
-TanyunAPI is offline-first and does not require cloud sync; data stays on your machine by default.
+يعمل TanyunAPI بأولوية دون اتصال ولا يتطلب مزامنة سحابية؛ تبقى البيانات على جهازك افتراضيًا.
 
 Repository: [CodeCoreLab/tanyun-api](https://github.com/CodeCoreLab/tanyun-api)
 

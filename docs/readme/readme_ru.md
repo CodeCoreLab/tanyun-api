@@ -34,9 +34,9 @@ TanyunAPI — это открытый настольный API-клиент с �
 
 TanyunAPI хранит коллекции API напрямую в локальной файловой системе в виде обычных текстовых файлов.
 
-Collaborate on collections with Git or any version control system.
+Совместно работайте над коллекциями с помощью Git или любой другой системы контроля версий.
 
-TanyunAPI is offline-first and does not require cloud sync; data stays on your machine by default.
+TanyunAPI работает офлайн-first и не требует облачной синхронизации; данные по умолчанию остаются на вашем устройстве.
 
 Repository: [CodeCoreLab/tanyun-api](https://github.com/CodeCoreLab/tanyun-api)
 

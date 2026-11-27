@@ -34,9 +34,9 @@ TanyunAPI स्व-विकसित आर्किटेक्चर वा�
 
 TanyunAPI API कलेक्शन को सीधे लोकल फाइल सिस्टम में सादे टेक्स्ट फ़ाइलों के रूप में सहेजता है।
 
-Collaborate on collections with Git or any version control system.
+Git या अपनी पसंद के किसी भी वर्जन कंट्रोल सिस्टम से कलेक्शन पर सहयोग करें।
 
-TanyunAPI is offline-first and does not require cloud sync; data stays on your machine by default.
+TanyunAPI ऑफ़लाइन-फ़र्स्ट है और क्लाउड सिंक की आवश्यकता नहीं है; डेटा डिफ़ॉल्ट रूप से आपकी मशीन पर रहता है।
 
 Repository: [CodeCoreLab/tanyun-api](https://github.com/CodeCoreLab/tanyun-api)
 

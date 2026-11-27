@@ -34,9 +34,9 @@ TanyunAPI, HTTP / gRPC / GraphQL / WebSocket ve koleksiyon regresyonu için kend
 
 TanyunAPI, API koleksiyonlarını doğrudan yerel dosya sisteminde düz metin dosyaları olarak saklar.
 
-Collaborate on collections with Git or any version control system.
+Koleksiyonlar üzerinde Git veya istediğiniz sürüm kontrol sistemiyle işbirliği yapın.
 
-TanyunAPI is offline-first and does not require cloud sync; data stays on your machine by default.
+TanyunAPI çevrimdışı önceliklidir ve bulut senkronizasyonu gerektirmez; veriler varsayılan olarak makinenizde kalır.
 
 Repository: [CodeCoreLab/tanyun-api](https://github.com/CodeCoreLab/tanyun-api)
 
